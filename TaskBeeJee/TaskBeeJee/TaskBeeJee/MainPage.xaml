@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskBeeJee.MainPage">
+
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Frame Padding="4">
+                <StackLayout Grid.Row="0" x:Name="ToolLayout" Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                    <Label TextColor="Black" FontSize="15" VerticalOptions="Center">Sort: </Label>
+                    <Picker x:Name="pickerSort" FontSize="15" HorizontalOptions="FillAndExpand" SelectedIndexChanged="PickerChanged">
+                        <Picker.Items>
+                            <x:String>Id asc</x:String>
+                            <x:String>Id desc</x:String>
+                            <x:String>User asc</x:String>
+                            <x:String>User desc</x:String>
+                            <x:String>Email asc</x:String>
+                            <x:String>Email desc</x:String>
+                            <x:String>Status asc</x:String>
+                            <x:String>Status desc</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Button x:Name="loginBtn" Clicked="LoginBtnClicked"/>
+                </StackLayout>
+            </Frame>
+            <ScrollView Grid.Row="1">
+                <StackLayout x:Name="mainLayout" Orientation="Vertical" VerticalOptions="FillAndExpand" />
+            </ScrollView>
+            <Button Grid.Row="2"
+                x:Name="addBtn"
+                VerticalOptions="End"
+                HorizontalOptions="End"
+                Clicked="AddBtnPressed"
+                CornerRadius="30"
+                BackgroundColor="White"
+                Padding="10"
+                WidthRequest="55"
+                HeightRequest="55"
+                Margin="10,0,10,10"
+                BorderColor="Black"
+                BorderWidth="1"
+                Text="+"
+                FontSize="20"
+                />
+            <StackLayout Grid.Row="2" Margin="10,0,0,0" x:Name="pagesLayout" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" />
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

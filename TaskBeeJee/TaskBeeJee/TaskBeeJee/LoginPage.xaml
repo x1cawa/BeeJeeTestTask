@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskBeeJee.LoginPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
+            <Entry x:Name="loginEntry" Placeholder="login" Text=""/>
+            <Entry x:Name="passwordEntry" Placeholder="password" Text=""/>
+            <Button Text="Login" Clicked="LoginBtnClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

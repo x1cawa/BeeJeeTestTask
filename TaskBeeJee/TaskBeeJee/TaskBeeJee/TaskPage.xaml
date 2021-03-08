@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskBeeJee.TaskPage">
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical">
+                <Frame x:Name="statusBar" IsVisible="False">
+                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label x:Name="editedLabel" HorizontalOptions="End" VerticalOptions="Center" IsVisible="False">Edited</Label>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox x:Name="statusCheckBox" IsEnabled="False"/>
+                            <Label VerticalOptions="Center">Done</Label>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame>
+                    <Entry x:Name="userEntry" Placeholder="Username" Text=""></Entry>
+                </Frame>
+                <Frame>
+                    <Entry x:Name="emailEntry" Placeholder="Email" Text=""></Entry>
+                </Frame>
+                <Frame x:Name="editorFrame" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
